@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: mashkovdm/flowmaster:0.0.1
+  repository: mashkovdm/flowmaster
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
