@@ -84,6 +84,7 @@ class ZeebeWorker(Service):
                 logger.info("ZEEBE is not available.", e, exc_info=e)
                 await self.sleep(60.0)
                 logger.info("ZEEBE worker waking up")
+                raise
 
 
 if __name__ == "__main__":
