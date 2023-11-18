@@ -63,7 +63,9 @@ async def process(messages):
 @app.service
 class ZeebeWorker(Service):
     async def on_start(self):
-        logger.info("ZEEBE worker is starting")
+        logger.info(
+            f"ZEEBE worker is starting {settings.ZEEBE_ADDRESS}:{settings.ZEEBE_PORT}"
+        )
 
     async def on_stop(self):
         logger.info("ZEEBE worker is stopping")
@@ -72,7 +74,9 @@ class ZeebeWorker(Service):
     async def _background_task(self):
         while not self.should_stop:
             try:
-                logger.info("ZEEBE worker starting")
+                logger.info(
+                    f"ZEEBE worker is starting {settings.ZEEBE_ADDRESS}:{settings.ZEEBE_PORT}"
+                )
                 from zeebeapp.worker import worker
 
                 await worker.work()
