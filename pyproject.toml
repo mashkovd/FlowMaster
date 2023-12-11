@@ -7,7 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-faust-streaming = "^0.10.16"
+faust-streaming = "^0.10.21"
 pydantic-settings = "^2.0.3"
 pyzeebe = "^3.0.4"
 
